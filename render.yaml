@@ -3,8 +3,10 @@ services:
     name: konquis-backend
     env: node
     plan: free
+    # Indica que la raíz del servicio es la carpeta backend dentro del repo
+    rootDirectory: backend
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node index.js
     envVars:
       - key: NODE_VERSION
         value: 18
